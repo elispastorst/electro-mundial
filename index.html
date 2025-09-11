@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electro Mundial - Tarjeta Digital</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #000;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    /* Menú responsive */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      nav.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .card {
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 400px;
+      background: #111;
+      border: 2px solid #FFD700;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #FFD700;
+    }
+
+    .card img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    .contact-info {
+      margin-top: 15px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    .whatsapp, .call-btn {
+      position: fixed;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .whatsapp {
+      right: 20px;
+    }
+
+    .call-btn {
+      right: 90px;
+      background: #25d366;
+    }
+
+    .call-btn img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: #000;
+      color: #FFD700;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    section img {
+      max-width: 90%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .mvv {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .mvv div {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #FFD700;
+      box-shadow: 0 0 10px #FFD70033;
+    }
+
+    .mvv h3 {
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffae00;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- LOGO HORIZONTAL en encabezado -->
+    <img src="https://res.cloudinary.com/dysydffc7/image/upload/v1757605752/LOGO_DE_innovatech_g57_emb_2_ttvosg.png" alt="Logo Horizontal Electro Mundial">
+    
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#ingresos">Generador de Ingresos</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <div class="card">
+      <!-- LOGO REDONDO CON CÍRCULO DORADO -->
+      <img src="https://res.cloudinary.com/dysydffc7/image/upload/v1757606882/LOGO_DE_emb_g58_emb_2_rymqbj.png" alt="Logo Redondo Electro Mundial">
+      <h2 style="color:#FFD700;">Electro Mundial</h2>
+      <p>Distribuidor Autorizado</p>
+      <div class="contact-info">
+        <p>📞 <span style="color:lime;">319 232 3728 / 320 998 9888</span></p>
+        <p>📍 <span style="color:red;">C.C. Plaza de Los Andes, Local 041<br>Calle 9 N° 6-43, Cúcuta - Colombia</span></p>
+      </div>
+    </div>
+
+    <!-- Misión, Visión y Valores en Inicio -->
+    <h2 style="color:#FFD700; margin-top:40px;">Misión, Visión y Valores</h2>
+    <div class="mvv">
+      <div>
+        <h3>Misión</h3>
+        <p>Brindar soluciones tecnológicas, eléctricas y accesorios para celulares de alta calidad, mejorando la vida diaria de nuestros clientes mediante productos confiables y accesibles.</p>
+      </div>
+      <div>
+        <h3>Visión</h3>
+        <p>Ser líderes en la región como la tienda de referencia en innovación tecnológica y productos eléctricos, expandiendo nuestra presencia en Colombia y ofreciendo siempre lo mejor en servicio y variedad.</p>
+      </div>
+      <div>
+        <h3>Valores</h3>
+        <p>✅ Calidad en cada producto<br>✅ Confianza y responsabilidad<br>✅ Atención cercana al cliente<br>✅ Innovación constante</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¡Escríbenos por WhatsApp o visítanos en nuestra sede!</p>
+    <img src="https://res.cloudinary.com/dysydffc7/image/upload/v1757607369/4d287414-0efc-4732-b3d5-e04077a29c0e_cd6gvd.jpg" alt="Contacto 1">
+    <img src="https://res.cloudinary.com/dysydffc7/image/upload/v1757607369/a148d392-8c5d-45e2-a152-7eb15153bf8b_laspgv.jpg" alt="Contacto 2">
+    
+    <!-- Google Maps -->
+    <div style="margin-top:20px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.854585171168!2d-72.50782032604198!3d7.894245506077092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e664511f8b69b63%3A0xb437e1a61cf8b8c!2sPlaza%20de%20Los%20Andes!5e0!3m2!1ses!2sco!4v1694200000000!5m2!1ses!2sco" 
+        width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="ingresos">
+    <h2>Generador de Ingresos</h2>
+    <img src="https://res.cloudinary.com/dysydffc7/image/upload/v1755564408/P-6_w7edxu.png" alt="Generador de Ingresos">
+    <br>
+    <a href="https://www.emprendeworld.com/websignup?ref=16951247" target="_blank" class="btn">🔗 Regístrate aquí</a>
+  </section>
+
+  <footer>
+    © 2025 Electro Mundial - Todos los derechos reservados
+  </footer>
+
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/573192323728" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp" alt="WhatsApp">
+  </a>
+
+  <!-- Botón Llamada -->
+  <a href="tel:+573192323728" class="call-btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Llamar">
+  </a>
+
+</body>
+</html>
