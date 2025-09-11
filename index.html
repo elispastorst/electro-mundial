@@ -192,8 +192,7 @@ footer {
   gap: 10px;
   z-index: 1000;
 }
-
-./* === BOTONES FLOTANTES PROFESIONALES === */
+/* === BOTONES FLOTANTES === */
 .float-btn {
   position: fixed;
   bottom: 20px;
@@ -201,16 +200,32 @@ footer {
   height: 55px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease;
   z-index: 1000;
 }
 
 .float-btn img {
   width: 28px;
   height: 28px;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Botón de llamada (azul) */
+.float-btn.call {
+  right: 85px;
+  background-color: #007bff;
+}
+
+/* Botón de WhatsApp (verde) */
+.float-btn.whatsapp {
+  right: 20px;
+  background-color: #25d366;
 }
 
 .float-btn:hover {
@@ -348,16 +363,17 @@ footer {
 </a>
 
 <!-- === BOTONES FLOTANTES === -->
-<a href="https://wa.me/573192323728" target="_blank" class="float-btn whatsapp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+<a href="tel:+573192323728" class="float-btn call" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Llamar">
 </a>
 
-<a href="tel:+573192323728" class="float-btn call">
-  <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Llamar">
+<a href="https://wa.me/573192323728" class="float-btn whatsapp" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 </body>
 </html>
+
 
 
 
