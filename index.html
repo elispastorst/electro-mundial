@@ -171,7 +171,79 @@
 
     .btn:hover {
       background: #ffae00;
-    }
+    }/* === Footer con espacio extra para no ser tapado === */
+footer {
+  background: black;
+  color: yellow;
+  text-align: center;
+  padding: 15px 10px;
+  padding-bottom: 80px; /* espacio para los botones */
+  font-size: 14px;
+}
+
+/* === Botones flotantes por defecto (PC/Laptop) === */
+.float-buttons {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.float-buttons a {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.call-button {
+  background: #007bff; /* azul para llamadas */
+}
+
+.whatsapp-button {
+  background: #25d366; /* verde WhatsApp */
+}
+
+.float-buttons a:hover {
+  transform: scale(1.1);
+}
+
+/* === Animación rebote === */
+@keyframes bounceIn {
+  0%   { transform: scale(0.3); opacity: 0; }
+  50%  { transform: scale(1.1); opacity: 1; }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* === Vista en móvil (pantallas pequeñas) === */
+@media (max-width: 600px) {
+  .float-buttons {
+    flex-direction: row;   /* en horizontal */
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%); /* centrado */
+    gap: 15px;
+  }
+
+  .float-buttons a {
+    width: 45px;  
+    height: 45px;
+    font-size: 22px;
+    animation: bounceIn 0.6s ease; /* 👈 animación aplicada */
+  }
+}
+
   </style>
 </head>
 <body>
@@ -251,18 +323,18 @@
     </p>
 </footer>
 
-
-  <!-- Botón WhatsApp -->
-  <a href="https://wa.me/573192323728" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp" alt="WhatsApp">
-  </a>
-
   <!-- Botón Llamada -->
   <a href="tel:+573192323728" class="call-btn">
     <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Llamar">
   </a>
+<!-- === BOTONES FLOTANTES === -->
+<div class="float-buttons">
+  <a href="tel:+573192323728" target="_blank" class="call-button">📞</a>
+  <a href="https://wa.me/573192323728" target="_blank" class="whatsapp-button">💬</a>
+</div>
 
 </body>
 </html>
+
 
 
