@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Electro Mundial - Tarjeta Digital</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-    }
+ 7   <style>
+8     body {
+9       margin: 0;
+10      font-family: Arial, sans-serif;
+11      background-color: #000;
+12      color: #fff;
+13      text-align: center;
+14    }
+
 
     header {
       display: flex;
@@ -192,23 +193,41 @@ footer {
   z-index: 1000;
 }
 
-.float-buttons a {
+./* === BOTONES FLOTANTES PROFESIONALES === */
+.float-btn {
+  position: fixed;
+  bottom: 20px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 26px;
-  color: white;
-  text-decoration: none;
+  justify-content: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
 }
 
-.call-button {
-  background: #007bff; /* azul para llamadas */
+.float-btn img {
+  width: 28px;
+  height: 28px;
 }
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Posiciones */
+.float-btn.whatsapp {
+  right: 20px;
+  background-color: #25d366; /* Verde WhatsApp */
+}
+
+.float-btn.call {
+  right: 90px;
+  background-color: #007bff; /* Azul llamada */
+}
+
 
 .whatsapp-button {
   background: #25d366; /* verde WhatsApp */
@@ -328,14 +347,18 @@ footer {
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
-<!-- Botón Llamada -->
+<!-- === BOTONES FLOTANTES === -->
+<a href="https://wa.me/573192323728" target="_blank" class="float-btn whatsapp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
 <a href="tel:+573192323728" class="float-btn call">
   <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Llamar">
 </a>
 
-
 </body>
 </html>
+
 
 
 
